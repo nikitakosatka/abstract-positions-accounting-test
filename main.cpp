@@ -2,7 +2,7 @@
  * @file
  * @brief Main file
 */
-#include "ConsoleInterface.h"
+#include "AbstractPositionsAccounting/ConsoleInterface.h"
 
 int main() {
     ConsoleInterface interface;
