@@ -1,6 +1,8 @@
-#include <iostream>
+#include "ConsoleInterface.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    ConsoleInterface interface;
+    interface.run();
+
     return 0;
 }
