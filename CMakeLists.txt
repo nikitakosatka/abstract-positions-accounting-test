@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.14)
+project(abstract_positions_accounting_test)
+
+set(CMAKE_CXX_STANDARD 17)
+
+add_executable(abstract_positions_accounting_test main.cpp)
