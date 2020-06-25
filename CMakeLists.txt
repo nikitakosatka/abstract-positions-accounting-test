@@ -3,4 +3,4 @@ project(abstract_positions_accounting_test)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(abstract_positions_accounting_test main.cpp Position.cpp PositionList.cpp ConsoleInterface.cpp ConsoleInterface.cpp)
+add_executable(abstract_positions_accounting_test main.cpp Position.cpp PositionList.cpp ConsoleInterface.cpp)
