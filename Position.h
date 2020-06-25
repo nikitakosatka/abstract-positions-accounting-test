@@ -14,6 +14,4 @@ public:
     bool operator==(const Position &other);
 
     std::string getData() const;
-
-    void setData(std::string data);
 };

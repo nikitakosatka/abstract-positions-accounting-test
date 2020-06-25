@@ -11,7 +11,3 @@ string Position::getData() const {
 bool Position::operator==(const Position &other) {
     return data == other.getData();
 }
-
-void Position::setData(string data) {
-    this->data = data;
-}
