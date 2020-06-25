@@ -7,7 +7,7 @@
 
 using namespace std;
 
-Position::Position(string data) : data(data) {}
+Position::Position(string data) : data(data) {} // Constructor in which we set data from the parameter
 
 string Position::getData() const {
     return data;
