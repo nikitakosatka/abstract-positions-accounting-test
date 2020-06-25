@@ -2,20 +2,18 @@
 
 #include <string>
 
-using namespace std;
-
 class Position {
 private:
-    string data;
+    std::string data;
 
 public:
     Position() = default;
 
-    Position(string data);
+    Position(std::string data);
 
-    inline bool operator==(const Position &other);
+    bool operator==(const Position &other);
 
-    string getData() const;
+    std::string getData() const;
 
-    void setData(string data);
+    void setData(std::string data);
 };

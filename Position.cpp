@@ -1,5 +1,7 @@
 #include "Position.h"
 
+using namespace std;
+
 Position::Position(string data) : data(data) {}
 
 string Position::getData() const {

@@ -1,5 +1,7 @@
 #include "PositionList.h"
 
+using namespace std;
+
 void PositionList::addPosition(Position position) {
     positions.push_back(position);
 }

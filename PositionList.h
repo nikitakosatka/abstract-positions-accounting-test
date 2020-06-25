@@ -4,11 +4,9 @@
 #include <string>
 #include "Position.h"
 
-using namespace std;
-
 class PositionList {
 private:
-    vector<Position> positions;
+    std::vector<Position> positions;
 
 public:
     PositionList() = default;
@@ -19,7 +17,7 @@ public:
 
     void removePosition(Position position);
 
-    vector<Position> searchPositions(string data);
+    std::vector<Position> searchPositions(std::string data);
 
-    vector<Position> &getAllPositions();
+    std::vector<Position> &getAllPositions();
 };
