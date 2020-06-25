@@ -18,6 +18,11 @@ void PositionList::removePosition(Position position) {
     for (int index = 0; index < positions.size(); index++) {
         if (positions[index] == position) {
             removePosition(index);
+            break;
+        }
+
+        if (index == positions.size() - 1) {
+            throw out_of_range("Element is not found");
         }
     }
 }
