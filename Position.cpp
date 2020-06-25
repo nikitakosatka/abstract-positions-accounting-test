@@ -1,3 +1,8 @@
+/*!
+ * @file
+ * @brief Position class implementation
+ * All methods of the Position class are implemented here
+*/
 #include "Position.h"
 
 using namespace std;

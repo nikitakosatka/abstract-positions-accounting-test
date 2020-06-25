@@ -1,3 +1,8 @@
+/*!
+ * @file
+ * @brief ConsoleInterface class implementation
+ * All methods of the ConsoleInterface class are implemented here
+*/
 #include <string>
 #include "ConsoleInterface.h"
 

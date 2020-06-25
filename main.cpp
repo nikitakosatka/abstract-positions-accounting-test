@@ -1,3 +1,7 @@
+/*!
+ * @file
+ * @brief Main file
+*/
 #include "ConsoleInterface.h"
 
 int main() {
