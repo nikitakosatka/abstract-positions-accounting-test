@@ -40,9 +40,7 @@ void ConsoleInterface::run() {
              << "4 - Выполнить текстовый поиск позиции" << endl
              << "5 - Выход" << endl;
 
-        int choice = 0;
-
-        cin >> choice;
+        int choice = intInput();
 
         switch (choice) { // action selection
             case 1:
@@ -72,7 +70,6 @@ void ConsoleInterface::addPosition() {
 
     cout << "Введите данные для добавления: ";
     // cin is not used because data might contain more than one word
-    cin.ignore();
     getline(cin, data);
 
     // create position and add it to the list
@@ -90,27 +87,25 @@ void ConsoleInterface::removePosition() {
              << "1 - По номеру элемента" << endl
              << "2 - По данным в позиции" << endl;
 
-        cin >> choice;
+        choice = intInput();
     }
 
     // element might be not found
     try {
         switch (choice) {
-            case 1:
+            case 1: {
                 // removal element by key number
-                int index;
-
                 cout << "Введите номер элемента, который вы желаете удалить: ";
-                cin >> index;
+                int index = intInput();
+
                 list.removePosition(index - 1);
                 break;
-
+            }
             case 2:
                 // removal element by data
                 string data;
 
                 cout << "Введите данные в позиции, которую вы желаете удалить: ";
-                cin.ignore();
                 getline(cin, data);
                 list.removePosition(data);
         }
@@ -134,7 +129,6 @@ void ConsoleInterface::searchPositions() {
 
     cout << "Введите данные по позициям, которые вы хотите найти: ";
     // we can search positions with more than one word
-    cin.ignore();
     getline(cin, data);
 
     if (!list.searchPositions(data).empty()) { // if list of such positions is not empty, print data
