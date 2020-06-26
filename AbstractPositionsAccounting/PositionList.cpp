@@ -3,12 +3,18 @@
  * @brief PositionList class implementation
  * All methods of the PositionList class are implemented here
 */
+#include <fstream>
 #include "PositionList.h"
 
 using namespace std;
 
+PositionList::PositionList() {
+    load();
+}
+
 void PositionList::addPosition(Position position) {
     positions.push_back(position); // add element using vector's push_back()
+    save(); // save data into file after every action
 }
 
 void PositionList::removePosition(int key) {
@@ -17,6 +23,7 @@ void PositionList::removePosition(int key) {
     }
 
     positions.erase(positions.begin() + key); // else delete element using vector's erase()
+    save();
 }
 
 void PositionList::removePosition(Position position) {
@@ -30,6 +37,7 @@ void PositionList::removePosition(Position position) {
             throw out_of_range("Element is not found"); // else throw an exception
         }
     }
+    save();
 }
 
 vector<Position> PositionList::searchPositions(string data) {
@@ -47,4 +55,21 @@ vector<Position> PositionList::searchPositions(string data) {
 
 vector<Position> &PositionList::getAllPositions() {
     return positions;
+}
+
+void PositionList::save() {
+    // create ofstream variable and put all data here
+    ofstream file("list.txt");
+    for (int index = 0; index < positions.size(); index++) {
+        file << positions[index].getData() << "\n";
+    }
+}
+
+void PositionList::load() {
+    string str;
+    // create ifstream variable and load all data from file
+    ifstream file("list.txt");
+    while (getline(file, str)) {
+        addPosition(str);
+    }
 }

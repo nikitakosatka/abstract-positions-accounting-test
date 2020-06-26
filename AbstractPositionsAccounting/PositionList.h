@@ -20,8 +20,9 @@ private:
 public:
     /*!
      * @brief Default constructor
+     * In which data loads from file
      */
-    PositionList() = default;
+    PositionList();
 
     /*!
      * @brief This method add abstract position to the back of the list
@@ -40,6 +41,16 @@ public:
      * @param position position which will be deleted
      */
     void removePosition(Position position);
+
+    /*!
+     * @brief This method saves current position list in file list.txt
+     */
+    void save();
+
+    /*!
+     * @brief This method loads list from file list.txt
+     */
+    void load();
 
     /*!
      * @brief Method is needed to search all abstract positions which data contains string from the parameter
