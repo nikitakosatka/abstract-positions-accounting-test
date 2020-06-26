@@ -8,6 +8,25 @@
 
 using namespace std;
 
+/*!
+ * @brief Function to input number
+ * Input number from keyboard without difficulties and using cin
+ * @return If user input number, return this number, else, return 0
+ */
+int intInput() {
+    int num;
+    string str;
+    getline(cin, str);
+
+    try {
+        num = stoi(str);
+    } catch (invalid_argument) {
+        num = 0;
+    }
+
+    return num;
+}
+
 void ConsoleInterface::run() {
     running = true; // Variable to exit program once
     cout << "Учёт абстрактных позиций" << endl;
