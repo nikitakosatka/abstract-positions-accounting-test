@@ -1,7 +1,7 @@
 # Abstract Positions Accounting
 ## Introduction
 This program is created to account abstract positions.\
-There is modern console interface with Russian text and many other opportunities.\
+There are modern console interface with Russian text and many other features.\
 You can add new position and delete it in 2 ways.\
 Also you can search different positions and print all of them.
 ## Installation
