@@ -1,4 +1,7 @@
 # Abstract Positions Accounting
+
+<img src="https://img.shields.io/github/workflow/status/nikitakosatka/abstract-positions-accounting-test/CMake">
+
 ## Introduction
 This program is created to account abstract positions.\
 There are modern console interface with Russian text and many other features.\
